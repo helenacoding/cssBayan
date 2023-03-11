@@ -4,50 +4,18 @@ body {
 
 .wrapper {
     max-width: 600px;
-    margin: 40px auto;
+    margin: 4rem auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
 }
 
-.accordion {
-    cursor: pointer;
-}
-
-.accordion_item_1 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgb(224, 223, 223);
-    border-top: 2px solid rgb(224, 223, 223);
-}
-
-.accordion_item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgb(224, 223, 223);
-}
-
-.accordion_title {
-    font-size: 16px;
-    color: blue;
-}
-
-.accordion > :hover {
-    color: black;
-}
-.foo > .inner {display:none;}
-.foo > a:hover + .inner {display:block;}
-
-
-.accord_input {
+.mem_input {
     appearance: none;
 }
 
-.accord_image {
-    display: none;
+.mem_btn {
+    display: grid;
+    grid-template-columns: 1fr 2rem;
 }
 
-.image {
-    display: block;
-    margin: 10px auto;
-    width: 60%;
-}
+
