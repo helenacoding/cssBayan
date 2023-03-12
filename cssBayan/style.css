@@ -3,19 +3,121 @@ body {
 }
 
 .wrapper {
-    max-width: 600px;
-    margin: 4rem auto;
+    max-width: 37.5em;
+    margin: 2.5em auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+}
+
+.mem {
+    border-top: 0.2em solid #dfdddd;
+    padding-bottom: 1.25em;
+    cursor: pointer;
+}
+
+input:checked ~ .mem_btn > .mem_title {
+    color: black;
+}
+
+label {
+    cursor: pointer;
 }
 
 .mem_input {
     appearance: none;
 }
 
-.mem_btn {
-    display: grid;
-    grid-template-columns: 1fr 2rem;
+.mem_title {
+    font-size: 1.5em;
+    color: blue;
 }
 
+.mem_btn {
+    display: grid;
+    grid-template-columns: 1fr 2em;
+    transition: 1s;
+}
 
+.mem_image {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    padding-top: 0.6em;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.mem:hover .mem_btn .mem_image {
+    width: 15em;
+    height: 15em;
+    margin: 0 auto;
+    padding-top: 0.6em;
+    transition: 0.5s;
+}
+
+.accordion:hover .mem_title {
+    color: black;
+    transition: 0.5s;
+}
+
+.accordion:hover .mem_icon {
+    background-image: url(./icon/plus-solid.svg);
+    background-repeat: no-repeat;
+    transition: 1s;   
+}
+
+.mem:hover .mem_icon {
+    background-image: url(./icon/xmark-solid.svg);
+    background-repeat: no-repeat; 
+    transition: 1s;
+}
+
+.mem_input:checked + .mem_btn > .mem_image {
+    width: 15em;
+    height: 15em;
+    margin: 0 auto;
+    padding-top: 0.6em;
+}
+
+.mem:active > .mem_btn > .mem_icon {
+    background-image: url(./icon/xmark-solid.svg);
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.mem:active {
+    opacity: 0.5;
+}
+
+.mem:active > .mem_btn > .mem_title {
+    color: blue;
+}
+
+@media (max-width: 820px) {
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .mem_title {
+      font-size: 1.1em;
+    }
+
+    .mem_icon {
+        background-image: none;
+    }
+  }
+  
+
+  @media (max-width: 320px) {
+    h1 {
+        font-size: 1.4em;
+    }
+
+    .mem_title {
+      font-size: 0.9em;
+    }
+
+    .mem_icon {
+        background-image: none;
+    }
+  }
